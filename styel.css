@@ -1,0 +1,192 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #081b29;
+    color: white;
+}
+
+header {
+    background: #05131e;
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #00eeff;
+    font-size: 28px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00eeff;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 10%;
+    background: linear-gradient(120deg, #081b29, #123d50);
+}
+
+.hero-content {
+    max-width: 650px;
+    animation: slide 1.2s ease;
+}
+
+.hero h3 {
+    font-size: 22px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 15px 0;
+}
+
+span {
+    color: #00eeff;
+}
+
+.hero h2 {
+    margin-bottom: 20px;
+}
+
+.hero p, .about p, .travel p {
+    line-height: 1.8;
+    color: #d0dce5;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 30px;
+    background: #00eeff;
+    color: #081b29;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    background: white;
+}
+
+.about, .travel, .contact {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.about h1, .travel h1, .contact h1 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.travel {
+    background: #102d3d;
+}
+
+.travel-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background: #081b29;
+    padding: 30px;
+    border: 1px solid #00eeff;
+    border-radius: 15px;
+    width: 250px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 0 20px #00eeff;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 13px 30px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 30px;
+    background: #00eeff;
+    color: #081b29;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: white;
+}
+
+footer {
+    background: #05131e;
+    text-align: center;
+    padding: 25px;
+    color: #ccc;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 650px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .about h1, .travel h1 {
+        font-size: 30px;
+    }
+}
